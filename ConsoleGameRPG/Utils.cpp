@@ -9,3 +9,9 @@ void slowPrint(std::string text, int speed) {
         std::this_thread::sleep_for(std::chrono::milliseconds(speed));
     }
 }
+void wait_ms(int milliseconds) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+}
+void wait_s(int seconds) {
+    std::this_thread::sleep_for(std::chrono::seconds(seconds));
+}

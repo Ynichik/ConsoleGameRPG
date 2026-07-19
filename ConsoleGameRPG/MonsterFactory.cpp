@@ -12,7 +12,7 @@ Character MonsterFactory::createMonster(std::string type) {
         return Character("Ogr", 75, 20, 15, 20, 80);
     }
     else if (type == "Death Knight") {
-        return Character("Death Knight", 150, 25, 20, 0, 150);
+        return Character("Death Knight", 150, 25, 20, 10, 150);
     }
     // Стандартний монстр, якщо тип не знайдено
     return Character("Forgotten", 10, 5, 1, 0, 10);
