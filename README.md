@@ -24,3 +24,4 @@ A console-based turn-based role-playing game featuring a modular architecture, c
 1. Clone the repository or download the source code.
 2. Open the project in **Visual Studio**.
 3. Build the solution (`Build Solution`) and run the application (`Start Without Debugging`).
+4. Or you can just download the ready .exe file from the releases page.
