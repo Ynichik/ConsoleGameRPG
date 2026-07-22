@@ -7,4 +7,5 @@ extern bool isRunning;
 // Оголошення функції
 void stopGame();
 
+void Victory();
 #endif

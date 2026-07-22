@@ -3,9 +3,14 @@
 #include "EasterEggs.h" // Для перевірки пасхалок під час бою
 #include <iostream>
 #include "Ui.h"
+#include "Localization.h"
+#include "GameContext.h"
+#include "SoundManager.h"
 
 void startBattle(Character& player, Character& enemy) {
     std::string lastMessage = "Ти зустрів монстра: " + enemy.name + "!";
+
+    SoundManager sManager;
 
     while (player.isAlive() && enemy.isAlive()) {
         // 1. Очищуємо екран (стираємо старий кадр)
@@ -27,7 +32,7 @@ void startBattle(Character& player, Character& enemy) {
         try {
             int action = std::stoi(input);
             // Перевірка пасхалок
-            checkActionEasterEggs(action, player, enemy);
+            checkActionEasterEggs(action, player, enemy, sManager);
 
             int finalDamage = player.getAttack();
             if (rand() % 5 == 0) { finalDamage *= 2; } // Критичний удар
